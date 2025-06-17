@@ -10,13 +10,13 @@ with app.app_context():
     Restaurant.query.delete()
     Pizza.query.delete()
     RestaurantPizza.query.delete()
-    r1 = Restaurant(name="Dominos", address="123 Pizza St")
-    r2 = Restaurant(name="Pizza Inn", address="456 Cheesy Blvd")
+    r1 = Restaurant(name="Zen kitchen", address="1bazzer plaza")
+    r2 = Restaurant(name="Pizza Inn", address="thika road")
     db.session.add_all([r1, r2])
     db.session.commit()
 
-    p1 = Pizza(name="Margherita", ingredients="Tomato, Mozzarella")
-    p2 = Pizza(name="Pepperoni", ingredients="Pepperoni, Cheese")
+    p1 = Pizza(name="Chicken", ingredients="Tomato, Chicken")
+    p2 = Pizza(name="Hawaian", ingredients="Pepperoni, pineaple")
     db.session.add_all([p1, p2])
     db.session.commit()
 
